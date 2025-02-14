@@ -253,7 +253,7 @@ body.active .gallery-item:not(.active) {
   left: 0;
   width: 100%;
   height: 150vh; /* Obloha cez celú výšku obrazovky */
-  background: url("assets/obloha.jpg") top center;
+  background: url("obloha.jpg") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
   filter: blur(2px);
@@ -266,7 +266,7 @@ body.active .gallery-item:not(.active) {
   bottom: 0; /* Aby začali hneď na začiatku */
   width: 100%;
   height: 370%; /* Výška stromov */
-  background: url("assets/stromy-parellax.png") top center;
+  background: url("stromy-parellax.png") top center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(3px);
