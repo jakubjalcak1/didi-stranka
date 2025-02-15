@@ -627,7 +627,9 @@ h1{
 }
 
 #narodeniny-obrazok{
-  position: relative;
+  object-fit: cover;
+  object-position: 50% 25%;  
+    
 }
 
 #secret{
