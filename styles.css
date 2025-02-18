@@ -1,243 +1,257 @@
-:root{
-    --scale: 1;
+:root {
+  --scale: 1;
 }
 
-html{
+html {
   height: 100vh;
   overflow: hidden;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    color: #333;
-    background: linear-gradient(to bottom, #87CEEB, #228B22, #000);
-    background-size: 100% 200%;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    z-index: -30;
-    transition: background-color 0.3s ease;
-  }
-  
-  .post-container {
-    position: absolute;
-    right: 30px;
-    top: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 90vw;
-}
-.post {
-    width: calc(400px * var(--scale));
-    height: calc(625px * var(--scale));
-    background: white;
-    border-radius: calc(10px * var(--scale));
-    box-shadow: 0 calc(2px * var(--scale)) calc(10px * var(--scale)) rgba(0, 0, 0, 0.2);
-    transform: scale(var(--scale));
-    transform-origin: center;
-    transition: transform 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #333;
+  background: linear-gradient(to bottom, #87CEEB, #228B22, #000);
+  background-size: 100% 200%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: -30;
+  transition: background-color 0.3s ease;
 }
 
-.post:visited{
-    transform: translateX(-250px) scale(125%);
-}
-.post-header {
-    display: flex;
-    align-items: center;
-    padding: calc(10px * var(--scale));
-}
-.profile-pic {
-  object-fit: cover;
-    width: calc(40px * var(--scale));
-    height: calc(40px * var(--scale));
-    border-radius: 50%;
-    margin-right: calc(10px * var(--scale));
-}
-.username {
-    font-weight: bold;
-    font-size: calc(16px * var(--scale));
-}
-.post-image {
-  margin-left: calc(25px * var(--scale));
-  object-fit: cover;
-  width: calc(350px * var(--scale));
-  width: calc(350px * var(--scale));
-    border-radius: calc(10px * var(--scale));
-}
-.post-icons {
-    display: flex;
-    justify-content: space-between;
-    padding: calc(10px * var(--scale));
-    font-size: calc(20px * var(--scale));
-}
-.post-icons i {
-    cursor: pointer;
-    margin-right: calc(10px * var(--scale));
-    transition: color 0.3s;
-}
-.liked {
-    color: red;
-}
-.post-caption {
-    padding: calc(10px * var(--scale));
-    font-size: calc(14px * var(--scale));
-}
-.username-caption {
-    font-weight: bold;
-}
-
-.hashtagy{
-    color: #0060df;
-}
-
-.hashtagy:hover, .hashtagy:active{
-    color: #0b76ce ;
-}
-
-  
-  #kalendar {
-    position: absolute;
-    top: 600px;
-    width: 40%;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    margin: 20px;
-    border: solid 3px black;
-    border-radius: 15px;
-    text-align: center;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .day, .date {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: white;
-  }
-  
-  .date.heart {
-    position: relative;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .date.heart::before {
-    content: "24";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    z-index: 2;
-  }
-  
-  .date.heart::after {
-    content: "❤️";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2);
-    color: red;
-    z-index: 1;
-  }
-  #nazov-galerie{
-    display: block;
-    position: relative;
-    top: 0;
-  }
-
-  .nazov-galerie{
-    border: solid 4px black;
-    border-radius: 10px;
-    background-color: white;
-    padding: 2px;
-  }
-  
-  #galeria {
-    position: absolute;
-    top: 1500px;
-    display: block;
-    flex-direction: row, column;
-    justify-content: left;
-    padding: 20px;
-    margin-right: 200px;
-    z-index: 3;
-    column-span: all;
-}
-
-.galeria{
+.post-container {
+  max-height: max-content;
+  position: absolute;
+  right: 1.95vw; /* 30px / 1536px */
+  top: 41.1vh; /* 300px / 730px */
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 2.6vh; /* 20px / 730px */
+  max-width: 90vw;
+}
+
+.post {
+  width: calc(26.04vw * var(--scale)); /* 400px / 1536px */
+  height: calc(85.62vh * var(--scale)); /* 625px / 730px */
+  min-height: fit-content;
+  max-height: fit-content;
+  background: white;
+  border-radius: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+  box-shadow: 0 calc(0.13vw * var(--scale)) calc(0.65vw * var(--scale)) rgba(0, 0, 0, 0.2);
+  transform: scale(var(--scale));
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.post:visited {
+  transform: translateX(-16.28vw) scale(125%); /* 250px / 1536px */
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+}
+
+.profile-pic {
+  object-fit: cover;
+  width: calc(2.6vw * var(--scale)); /* 40px / 1536px */
+  height: calc(2.6vw * var(--scale)); /* 40px / 1536px */
+  border-radius: 50%;
+  margin-right: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+}
+
+.username {
+  font-weight: bold;
+  font-size: calc(1.04vw * var(--scale)); /* 16px / 1536px */
+}
+
+.post-image {
+  margin-left: calc(1.63vw * var(--scale)); /* 25px / 1536px */
+  object-fit: cover;
+  width: calc(22.79vw * var(--scale)); /* 350px / 1536px */
+  border-radius: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+}
+
+.post-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+  font-size: calc(1.3vw * var(--scale)); /* 20px / 1536px */
+}
+
+.post-icons i {
+  cursor: pointer;
+  margin-right: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+  transition: color 0.3s;
+}
+
+.liked {
+  color: red;
+}
+
+.post-caption {
+  padding: calc(0.65vw * var(--scale)); /* 10px / 1536px */
+  font-size: calc(0.91vw * var(--scale)); /* 14px / 1536px */
+}
+
+.username-caption {
+  font-weight: bold;
+}
+
+.hashtagy {
+  color: #0060df;
+}
+
+.hashtagy:hover,
+.hashtagy:active {
+  color: #0b76ce;
+}
+
+#kalendar {
+  position: absolute;
+  top: 82.19vh; /* 600px / 730px */
+  width: 40%;
+  padding: 1.3vw; /* 20px / 730px */
+  background: rgba(255, 255, 255, 0.8);
+  margin: 2.6vh; /* 20px / 730px */
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.65vw; /* 10px / 730px */
+  padding: 1.3vw; /* 20px / 730px */
+}
+
+.day,
+.date {
+  font-size: 1.041vw;
+  padding: 0.98vw; /* 15px / 730px */
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 0.68vh; /* 5px / 730px */
+  background: white;
+}
+
+.date.heart {
+  position: relative;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.68vh; /* 5px / 730px */
+}
+
+.date.heart::before {
+  content: "24";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.date.heart::after {
+  content: "❤️";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  color: red;
+  z-index: 1;
+}
+
+#nazov-galerie {
+  display: block;
+  position: relative;
+  top: 0;
+}
+
+.nazov-galerie {
+  font-size: 1.562vw;
+  border: solid 0.26vw black; /* 4px / 1536px */
+  border-radius: 1.37vh; /* 10px / 730px */
+  background-color: white;
+  padding: 0.27vh; /* 2px / 730px */
+}
+
+#galeria {
+  position: absolute;
+  top: 205.48vh; /* 1500px / 730px */
+  display: block;
+  flex-direction: row, column;
+  justify-content: left;
+  padding: 2.6vh; /* 20px / 730px */
+  margin-right: 13.02vw; /* 200px / 1536px */
+  z-index: 3;
+  column-span: all;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.37vh; /* 10px / 730px */
 }
 
 .gallery-item {
-    margin: 10px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+  margin: 1.37vh; /* 10px / 730px */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .gallery-item img {
-    width: 200px;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
+  width: 13.02vw; /* 200px / 1536px */
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-item .caption {
-    position: absolute;
-    bottom: -100%; /* Text je spočiatku skrytý */
-    left: -10px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    transition: bottom 0.3s ease;
+  position: absolute;
+  bottom: -13.7vh; /* 100px / 730px */
+  left: -1.37vh; /* 10px / 730px */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 1.37vh; /* 10px / 730px */
+  transition: bottom 0.3s ease;
 }
 
-/* Efekt pre aktívny obrázok */
 .gallery-item.active img {
-    transform: translateY(-10px) scale(1.1);
-    filter: blur(0);
-    z-index: 10; /* Uistite sa, že aktívny obrázok je navrchu */
+  transform: translateY(-1.37vh) scale(1.1); /* 10px / 730px */
+  filter: blur(0);
+  z-index: 10;
 }
 
 .gallery-item.active .caption {
-    bottom: 0; /* Text sa zobrazí */
+  bottom: 0;
 }
 
-/* Efekt pre celú stránku, keď je obrázok aktívny */
 body.active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 670%;
-    background-color: rgba(0, 0, 0, 0.7); /* Stmavené pozadie */
-    filter: blur(5px) brightness(0.5);
-    z-index: 1; /* Uistite sa, že pozadie je pod obrázkom */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 670%;
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: blur(0.34vh) brightness(0.5); /* 5px / 730px */
+  z-index: 1;
 }
 
 body.active .gallery-item:not(.active) {
-    filter: blur(5px) brightness(0.5);/* Rozmazanie všetkých obrázkov okrem aktívneho */
+  filter: blur(0.34vh) brightness(0.5); /* 5px / 730px */
 }
 
 .parallax-container {
@@ -252,53 +266,52 @@ body.active .gallery-item:not(.active) {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150vh; /* Obloha cez celú výšku obrazovky */
-  background: url("obloha.jpg") top center;
+  height: 150vh;
+  background: url("assets/obloha.jpg") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
-  filter: blur(2px);
+  filter: blur(0.27vh); /* 2px / 730px */
   z-index: -2;
 }
 
-/* Stromy (sticky efekt) */
 .parallax-stromy {
   position: sticky;
-  bottom: 0; /* Aby začali hneď na začiatku */
+  bottom: 0;
   width: 100%;
-  height: 370%; /* Výška stromov */
-  background: url("stromy-parellax.png") top center;
+  height: 370%;
+  background: url("assets/stromy-parellax.png") top center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(3px);
+  filter: blur(0.41vh); /* 3px / 730px */
   z-index: -1;
 }
 
-.parallax-container2{
-    width: 100%;
-    min-height: 200vh;
-    position: relative;
-    transform-style: preserve-3d;
+.parallax-container2 {
+  width: 100%;
+  min-height: 200vh;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
-h1{
+h1 {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3.91vw; /* 60px / 1536px */
   font-family: 'Great Vibes', cursive;
   text-align: center;
 }
 
-.nadpis{
-  position: absolute;  /* Alebo relative, ak je potrebné */
-  top: 50px;
-  border: solid 4px black;
-  border-radius: 10px;
+.nadpis {
+  position: absolute;
+  top: 6.85vh; /* 50px / 730px */
+  border: solid 0.26vw black; /* 4px / 1536px */
+  border-radius: 1.37vh; /* 10px / 730px */
   background-color: white;
-  padding: 2px;
+  padding: 0.27vh; /* 2px / 730px */
   text-align: center;
   transform: translateX(-50%);
 }
 
-.milujem{
+.milujem {
   font-weight: 700;
   text-decoration: underline;
   font-family: 'Parisienne', cursive;
@@ -306,21 +319,21 @@ h1{
 
 #countdown-container {
   position: absolute;
-  top: 2530px;
-  left: 85px;
+  top: 346.58vh; /* 2530px / 730px */
+  left: 5.53vw; /* 85px / 1536px */
   background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  border-radius: 2.05vh; /* 15px / 730px */
+  box-shadow: 0 0.27vh 2.05vh rgba(0, 0, 0, 0.2); /* 4px / 730px, 15px / 730px */
+  padding: 1.95vw; /* 30px / 730px */
   text-align: center;
-  max-width: 400px;
+  max-width: 26.04vw; /* 400px / 1536px */
   width: 100%;
 }
 
 .countdown-title {
-  font-size: 24px;
+  font-size: 1.56vw; /* 24px / 1536px */
   color: #333333;
-  margin-bottom: 20px;
+  margin-bottom: 2.74vh; /* 20px / 730px */
 }
 
 .countdown {
@@ -332,249 +345,246 @@ h1{
 .countdown-item {
   background-color: #ff6f61;
   color: #ffffff;
-  border-radius: 10px;
-  padding: 15px;
-  width: 80px;
+  border-radius: 1.37vh; /* 10px / 730px */
+  padding: 0.98vw; /* 15px / 730px */
+  width: 5.21vw; /* 80px / 1536px */
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.27vh 1.37vh rgba(0, 0, 0, 0.1); /* 2px / 730px, 10px / 730px */
 }
 
 .countdown-number {
-  font-size: 32px;
+  font-size: 2.08vw; /* 32px / 1536px */
   font-weight: bold;
 }
 
 .countdown-label {
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 0.91vw; /* 14px / 1536px */
+  margin-top: 0.68vh; /* 5px / 730px */
 }
 
-#secret{
+#secret {
   position: relative;
 }
 
-#tajna-sekcia{
+#tajna-sekcia {
+  min-width: fit-content;
+  max-height: fit-content;
   position: absolute;
-  top: 3200px;
-  right: 1100px;
+  top: 438.36vh; /* 3200px / 730px */
+  right: 71.61vw; /* 1100px / 1536px */
 }
 
 .hidden {
   display: none;
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 1.37vh; /* 10px / 730px */
+  margin-top: 1.37vh; /* 10px / 730px */
   background: #f9f9f9;
 }
 
-.text-ku-ig-kalendar-a-galerii{
+.text-ku-ig-kalendar-a-galerii {
   text-align: justify;
   position: absolute;
-  top: 1050px;
-  margin-left: 705px;;
-  margin-right: 35px;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 21px;
+  top: 143.84vh; /* 1050px / 730px */
+  right: 2.28vw;
+  width: 48.44vw;
+ /* 35px / 1536px */
+  padding: 0.68vh; /* 5px / 730px */
+  padding-left: 2.05vh; /* 15px / 730px */
+  padding-right: 2.05vh; /* 15px / 730px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 3px black;
-  border-radius: 10px;
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
   z-index: 0;
 }
 
-.jadro-pkg{
+.jadro-pkg {
   position: absolute;
-  top: 1050px;
-  right: 10px;
-  font-size: 21px;
+  top: 143.84vh; /* 1050px / 730px */
+  right: 0.65vw; /* 10px / 1536px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   z-index: 2;
   text-align: justify;
 }
 
-.uvod{
+.uvod {
   text-align: justify;
   position: absolute;
-  top: 230px;
-  margin-left: 20px;
-  margin-right: 520px;
-  padding: 5px;
-  font-size: 21px;
+  top: 31.51vh; /* 230px / 730px */
+  left: 1.3vw;
+  width: 62.79vw;
+  padding: 0.68vh; /* 5px / 730px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 3px black;
-  border-radius: 10px;
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
 }
 
-.prvy-odsek{
+.prvy-odsek {
   position: absolute;
-  top: 230px;
-  padding-right: 550px;
-  padding-left: 30px;
-  font-size: 21px;
+  top: 0;
+  padding-right: 35.81vw; /* 550px / 1536px */
+  padding-left: 1.95vw; /* 30px / 1536px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
 }
 
-.jadro-g{
+.jadro-g {
   text-align: justify;
   position: absolute;
-  top: 2230px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 21px;
+  top: 305.48vh; /* 2230px / 730px */
+  margin-left: 1.3vw; /* 20px / 1536px */
+  margin-right: 1.3vw; /* 20px / 1536px */
+  padding: 0.68vh; /* 5px / 730px */
+  padding-left: 2.05vh; /* 15px / 730px */
+  padding-right: 2.05vh; /* 15px / 730px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 3px black;
-  border-radius: 10px;
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
 }
 
-.text-ku-galerke{
+.text-ku-galerke {
   position: absolute;
-  top: 2230px;
-  padding-right: 550px;
-  padding-left: 30px;
-  font-size: 21px;
+  top: 305.48vh; /* 2230px / 730px */
+  padding-right: 35.81vw; /* 550px / 1536px */
+  padding-left: 1.95vw; /* 30px / 1536px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
 }
 
-.countdown-odsek{
+.countdown-odsek {
   text-align: justify;
   position: absolute;
-  top: 2750px;
-  margin-left: 20px;
-  margin-right: 900px;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 21px;
+  top: 376.71vh; /* 2750px / 730px */
+  margin-left: 1.3vw; /* 20px / 1536px */
+  margin-right: 58.59vw; /* 900px / 1536px */
+  padding: 0.68vh; /* 5px / 730px */
+  padding-left: 2.05vh; /* 15px / 730px */
+  padding-right: 2.05vh; /* 15px / 730px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 3px black;
-  border-radius: 10px;
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
 }
 
-.countdown-text{
+.countdown-text {
   position: absolute;
-  top: 2750px;
-  padding-right: 550px;
-  padding-left: 30px;
-  font-size: 21px;
+  top: 376.71vh; /* 2750px / 730px */
+  padding-right: 35.81vw; /* 550px / 1536px */
+  padding-left: 1.95vw; /* 30px / 1536px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
 }
 
 .timeline {
   position: absolute;
-  top: 2520px;
-  right: -150px;
-  max-width: 800px; /* Zmenšená šírka */
+  top: 345.21vh; /* 2520px / 730px */
+  right: -9.77vw; /* 150px / 1536px */
+  max-width: 52.08vw; /* 800px / 1536px */
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 2.6vw 0; /* 40px / 730px */
 }
 
-/* Stredová čiara */
 .timeline::after {
   content: '';
   position: absolute;
-  width: 4px; /* Tenšia čiara */
-  background: linear-gradient(to bottom, #ff7eb9 0%, #ff7eb9 100%); /* Začiatok a koniec */
-  top: 20px;
-  bottom: 20px;
-  left: 20%; /* Posunuté doľava */
-  margin-left: -2px;
+  width: 0.26vw; /* 4px / 1536px */
+  background: linear-gradient(to bottom, #ff7eb9 0%, #ff7eb9 100%);
+  top: 2.74vh; /* 20px / 730px */
+  bottom: 2.74vh; /* 20px / 730px */
+  left: 20%;
+  margin-left: -0.13vw; /* 2px / 1536px */
   z-index: -1;
 }
 
-/* Štýly pre milníky */
 .milnik {
-  padding: 15px 30px; /* Zmenšené paddings */
+  padding: 2.05vh 1.95vw; /* 15px / 730px, 30px / 1536px */
   position: relative;
-  width: 40%; /* Zmenšená šírka */
+  width: 40%;
   background-color: inherit;
 }
 
-/* Kruhové indikátory */
 .milnik::after {
   content: '';
   position: absolute;
-  width: 20px; /* Menšie kruhy */
-  height: 20px;
-  right: -10px;
+  width: 1.3vw; /* 20px / 1536px */
+  height: 2.74vh; /* 20px / 1536px */
+  right: -0.65vw; /* 10px / 1536px */
   background-color: #fff;
-  border: 3px solid #ff7eb9; /* Ružový kruh */
-  top: 15px;
+  border: 0.2vw solid #ff7eb9; /* 3px / 1536px */
+  top: 2.05vh; /* 15px / 730px */
   border-radius: 50%;
   z-index: 0;
-  transition: background-color 0.3s ease; /* Plynulé vyplnenie farbou */
+  transition: background-color 0.3s ease;
 }
 
-/* Umiestnenie milníkov na ľavú a pravú stranu */
 .left {
-  left: -30.5%; /* Posunuté viac doľava */
+  left: -30.5%; /* 300px / 1536px */
 }
 
 .right {
-  left: 20%; /* Posunuté doľava */
+  left: 20%;
 }
 
-/* Šípky pre milníky */
 .left::before {
   content: " ";
   height: 0;
   position: absolute;
-  top: 18px;
+  top: 2.47vh; /* 18px / 730px */
   width: 0;
   z-index: 0;
-  right: 22px;
+  right: 1.43vw; /* 22px / 1536px */
   border: medium solid #fff;
-  border-width: 8px 0 8px 8px;
+  border-width: 1.1vh 0 0.52vw 1.1vh; /* 8px / 730px */
   border-color: transparent transparent transparent #fff;
-  transition: transform 0.3s ease; /* Plynulé zväčšenie šípok */
+  transition: transform 0.3s ease;
 }
 
 .right::before {
   content: " ";
   height: 0;
   position: absolute;
-  top: 18px;
+  top: 2.47vh; /* 18px / 730px */
   width: 0;
   z-index: 0;
-  left: 22px;
+  left: 1.43vw; /* 22px / 1536px */
   border: medium solid #fff;
-  border-width: 8px 8px 8px 0;
+  border-width: 1.1vh 0.52vw 1.1vh 0; /* 8px / 730px */
   border-color: transparent #fff transparent transparent;
-  transition: transform 0.3s ease; /* Plynulé zväčšenie šípok */
+  transition: transform 0.3s ease;
 }
 
 .right::after {
-  left: -10px;
+  left: -0.65vw; /* 10px / 1536px */
 }
 
-/* Štýly pre obsah milníkov */
 .content {
-  padding: 15px;
+  padding: 2.05vh; /* 15px / 730px */
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.1vh; /* 8px / 730px */
+  box-shadow: 0 0.27vh 1.37vh rgba(0, 0, 0, 0.1); /* 4px / 730px, 10px / 730px */
   position: relative;
-  transition: transform 0.3s ease; /* Plynulé zväčšenie */
+  transition: transform 0.3s ease;
 }
 
 .content h2 {
-  color: #ff7eb9; /* Ružový nadpis */
+  color: #ff7eb9;
   margin-top: 0;
-  font-size: 19.2px; /* Menšie písmo */
+  font-size: 1.25vw; /* 19.2px / 1536px */
 }
 
 .content p.date {
   font-style: italic;
   color: #888;
-  margin-bottom: 8px;
-  font-size: 14.4px; /* Menšie písmo */
+  margin-bottom: 1.1vh; /* 8px / 730px */
+  font-size: 0.94vw; /* 14.4px / 1536px */
 }
 
 .content img {
@@ -582,120 +592,119 @@ h1{
   position: relative;
   left: 10%;
   object-fit: cover;
-  width: 150px;
-  height: 112.5px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  width: 9.77vw; /* 150px / 1536px */
+  height: 16.07vh; /* 112.5px / 730px */
+  border-radius: 1.1vh; /* 8px / 730px */
+  margin-bottom: 1.1vh; /* 8px / 730px */
 }
 
 .content p {
   line-height: 1.5;
-  font-size: 14.4px; /* Menšie písmo */
+  font-size: 0.94vw; /* 14.4px / 1536px */
 }
 
-/* Efekt pri prejdení myšou */
 .milnik:hover .content {
-  transform: scale(1.05) translateX(-2px); /* Zväčšenie bublinky */
+  transform: scale(1.05) translateX(-0.13vw); /* 2px / 1536px */
 }
 
 .milnik:hover::after {
-  background-color: #ff7eb9; /* Vyplnenie kruhu farbou */
+  background-color: #ff7eb9;
 }
 
 .milnik:hover::before {
-  transform: scale(1.2); /* Zväčšenie šípok */
+  transform: scale(1.2);
 }
 
 .timeline-nadpis {
-  border: solid 4px black;
+  border: solid 0.26vw black; /* 4px / 1536px */
   text-align: center;
-  border-radius: 10px;
+  border-radius: 1.37vh; /* 10px / 730px */
   background-color: white;
-  padding: 5px;
+  padding: 0.33vw; /* 5px / 730px */
   display: block;
   position: absolute;
-  top: -100px; /* Presunutie nadpisu vyššie */
+  top: -13.7vh; /* 100px / 730px */
   left: 55%;
   transform: translateX(-135%);
-  font-size: 24px;
+  font-size: 1.56vw; /* 24px / 1536px */
   z-index: 0;
 }
 
 .timeline-odsek {
   position: relative;
-  top: 30px;
+  top: 4.11vh; /* 30px / 730px */
 }
 
-#narodeniny-obrazok{
+#narodeniny-obrazok {
   object-fit: cover;
-  object-position: 50% 25%;  
-    
+  object-position: 100% 25%;
 }
 
-#secret{
+#secret {
   position: relative;
 }
 
-#tajna-sekcia{
-  width: 450px;
-  height: 600px;
+#tajna-sekcia {
+  width: 29.3vw; /* 450px / 1536px */
+  height: 82.19vh; /* 600px / 730px */
   position: absolute;
-  left: 160px;
+  left: 10.42vw; /* 160px / 1536px */
   text-align: center;
-  border: solid 4px black;
-  border-radius: 10px;
+  border: solid 0.26vw black; /* 4px / 1536px */
+  border-radius: 1.37vh; /* 10px / 730px */
   background-color: white;
-  padding: 5px;
-  top: 4150px;
-  right: 1100px;
+  padding: 0.68vh; /* 5px / 730px */
+  top: 568.49vh; /* 4150px / 730px */
+  right: 71.61vw; /* 1100px / 1536px */
 }
 
 .hidden {
   display: none;
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 1.37vh; /* 10px / 730px */
+  margin-top: 1.37vh; /* 10px / 730px */
   background: #f9f9f9;
 }
-.tajny-obraz{
-  width: 175px;
+
+.tajny-obraz {
+  width: 11.39vw; /* 175px / 1536px */
 }
 
-#prihovor-tajna-sprava{
+#prihovor-tajna-sprava {
   text-align: justify;
-  font-size: 16px;
+  font-size: 1.04vw; /* 16px / 1536px */
   line-height: 1.5;
-  padding: 5px;
+  padding: 0.68vh; /* 5px / 730px */
 }
 
-.posledny-odsek{
+.posledny-odsek {
   text-align: justify;
   position: absolute;
-  top: 3500px;
-  margin-left: 20px;
-  margin-right: 700px;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 21px;
+  top: 479.45vh; /* 3500px / 730px */
+  margin-left: 1.3vw; /* 20px / 1536px */
+  margin-right: 45.57vw; /* 700px / 1536px */
+  padding: 0.68vh; /* 5px / 730px */
+  padding-left: 2.05vh; /* 15px / 730px */
+  padding-right: 2.05vh; /* 15px / 730px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 3px black;
-  border-radius: 10px;
+  border: solid 0.2vw black; /* 3px / 1536px */
+  border-radius: 2.05vh; /* 15px / 730px */
 }
 
-.posledny-text{
+.posledny-text {
   position: absolute;
-  top: 3500px;
-  padding-right: 550px;
-  padding-left: 30px;
-  font-size: 21px;
+  top: 479.45vh; /* 3500px / 730px */
+  padding-right: 35.81vw; /* 550px / 1536px */
+  padding-left: 1.95vw; /* 30px / 1536px */
+  font-size: 1.37vw; /* 21px / 1536px */
   line-height: 1.5;
 }
 
-.arrow{
+.arrow {
+  width: 30.41vw;
   position: absolute;
-  top: 3320px;
-  left: 600px;
-  height: 200px;
+  top: 454.79vh; /* 3320px / 730px */
+  left: 39.06vw; /* 600px / 1536px */
 }
