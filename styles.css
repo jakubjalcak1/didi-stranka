@@ -267,7 +267,7 @@ body.active .gallery-item:not(.active) {
   left: 0;
   width: 100%;
   height: 150vh;
-  background: url("obloha.jpg") top center;
+  background: url(obloha.jpg) top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
   filter: blur(0.27vh); /* 2px / 730px */
@@ -279,7 +279,7 @@ body.active .gallery-item:not(.active) {
   bottom: 0;
   width: 100%;
   height: 370%;
-  background: url("stromy-parellax.png") top center;
+  background: url(stromy-parellax.png) top center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.41vh); /* 3px / 730px */
