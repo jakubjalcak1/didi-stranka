@@ -816,7 +816,7 @@ h2 {
   .parallax-stromy {
     position: absolute;
     bottom: min(-136.5vh);
-    height: 90%;
+    min-height: 90%;
   }
 
   .parallax-container {
