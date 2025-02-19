@@ -815,7 +815,7 @@ h2 {
 
   .parallax-stromy {
     position: absolute;
-    bottom: min(-120vh, 1500px);
+    bottom: min(-150dvh, 2000px);
     height: 300%;
   }
   body.active::before{
