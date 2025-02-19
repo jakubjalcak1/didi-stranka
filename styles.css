@@ -3,7 +3,6 @@
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -26,7 +25,7 @@ body {
 }
 
 .post-container {
-  max-height: max-content;
+  max-height: fit-content;
   position: absolute;
   right: 1.95vw; /* 30px / 1536px */
   top: 41.1vh; /* 300px / 730px */
@@ -270,7 +269,7 @@ body.active .gallery-item:not(.active) {
   left: 0;
   width: 100%;
   height: 150vh;
-  background: url(obloha.jpg) top center;
+  background: url("assets/obloha.jpg") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
   filter: blur(0.27vh); /* 2px / 730px */
@@ -282,7 +281,7 @@ body.active .gallery-item:not(.active) {
   bottom: 0;
   width: 100%;
   height: 370%;
-  background: url(stromy-parellax.png) top center;
+  background: url("assets/stromy-parellax.png") top center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.41vh); /* 3px / 730px */
@@ -742,7 +741,7 @@ h2 {
   }
 
   #galeria {
-    top: min(205.48vh, 600px, 82.19vh);
+    top: min(205.48vh, 600px);
     @media (orientation: landscape) {
       top: min(205.48vh, 650px);
     }
@@ -825,6 +824,7 @@ h2 {
   }
 
   body {
-    height: calc(100dvh - 0.25px);
+    height: calc(100dvh - 0.5px);
   }
+
 }
