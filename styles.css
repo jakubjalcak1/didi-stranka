@@ -3,6 +3,7 @@
 }
 
 html {
+  -webkit-text-size-adjust: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -20,7 +21,7 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: scroll;
-  z-index: -30;
+  z-index: -5;
   transition: background-color 0.3s ease;
 }
 
@@ -122,7 +123,7 @@ body {
   background: rgba(255, 255, 255, 0.8);
   margin: 2.6vh; /* 20px / 730px */
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 15px; /* 15px / 730px */
   text-align: center;
 }
 
@@ -133,28 +134,26 @@ body {
   padding: 1.3vw; /* 20px / 730px */
 }
 
-.day,
-.date {
+.day, .date {
   font-size: 1.041vw;
   padding: 0.98vw; /* 15px / 730px */
   text-align: center;
   border: 1px solid #ccc;
-  border-radius: 0.68vh; /* 5px / 730px */
+  border-radius: 5px; /* 5px / 730px */
   background: white;
 }
 
 .date.heart {
-  position: relative;
   background: white;
   border: 1px solid #ccc;
-  border-radius: 0.68vh; /* 5px / 730px */
+  border-radius: 5px; /* 5px / 730px */
 }
 
 .date.heart::before {
   content: "24";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 75.5%;
+  left: 75.5%;
   transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
@@ -164,8 +163,8 @@ body {
 .date.heart::after {
   content: "❤️";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 75.5%;
+  left: 75.5%;
   transform: translate(-50%, -50%) scale(2);
   color: red;
   z-index: 1;
@@ -180,7 +179,7 @@ body {
 .nazov-galerie {
   font-size: 1.562vw;
   border: solid 0.26vw black; /* 4px / 1536px */
-  border-radius: 1.37vh; /* 10px / 730px */
+  border-radius: 10px; /* 10px / 730px */
   background-color: white;
   padding: 0.27vh; /* 2px / 730px */
 }
@@ -191,7 +190,7 @@ body {
   display: block;
   flex-direction: row, column;
   justify-content: left;
-  padding: 2.6vh; /* 20px / 730px */
+  padding: 1.3vw; /* 20px / 730px */
   margin-right: 13.02vw; /* 200px / 1536px */
   z-index: 3;
   column-span: all;
@@ -200,11 +199,11 @@ body {
 .galeria {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.37vh; /* 10px / 730px */
+  gap: 0.65vw; /* 10px / 730px */
 }
 
 .gallery-item {
-  margin: 1.37vh; /* 10px / 730px */
+  margin: 0.65vw; /* 10px / 730px */
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -214,6 +213,10 @@ body {
   width: 13.02vw; /* 200px / 1536px */
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.caption {
+  font-size: 1.04vw;
 }
 
 .gallery-item .caption {
@@ -267,7 +270,7 @@ body.active .gallery-item:not(.active) {
   left: 0;
   width: 100%;
   height: 150vh;
-  background: url(obloha.jpg) top center;
+  background: url("assets/obloha.jpg") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
   filter: blur(0.27vh); /* 2px / 730px */
@@ -279,7 +282,7 @@ body.active .gallery-item:not(.active) {
   bottom: 0;
   width: 100%;
   height: 370%;
-  background: url(stromy-parellax.png) top center;
+  background: url("assets/stromy-parellax.png") top center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.41vh); /* 3px / 730px */
@@ -300,11 +303,15 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 1.56vw;
+}
+
 .nadpis {
   position: absolute;
   top: 6.85vh; /* 50px / 730px */
   border: solid 0.26vw black; /* 4px / 1536px */
-  border-radius: 1.37vh; /* 10px / 730px */
+  border-radius: 10px; /* 10px / 730px */
   background-color: white;
   padding: 0.27vh; /* 2px / 730px */
   text-align: center;
@@ -322,7 +329,7 @@ h1 {
   top: 346.58vh; /* 2530px / 730px */
   left: 5.53vw; /* 85px / 1536px */
   background-color: #ffffff;
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 15px; /* 15px / 730px */
   box-shadow: 0 0.27vh 2.05vh rgba(0, 0, 0, 0.2); /* 4px / 730px, 15px / 730px */
   padding: 1.95vw; /* 30px / 730px */
   text-align: center;
@@ -345,7 +352,7 @@ h1 {
 .countdown-item {
   background-color: #ff6f61;
   color: #ffffff;
-  border-radius: 1.37vh; /* 10px / 730px */
+  border-radius: 10px; /* 10px / 730px */
   padding: 0.98vw; /* 15px / 730px */
   width: 5.21vw; /* 80px / 1536px */
   text-align: center;
@@ -367,7 +374,6 @@ h1 {
 }
 
 #tajna-sekcia {
-  min-width: fit-content;
   max-height: fit-content;
   position: absolute;
   top: 438.36vh; /* 3200px / 730px */
@@ -396,7 +402,7 @@ h1 {
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 10px; /* 15px / 730px */
   z-index: 0;
 }
 
@@ -421,7 +427,7 @@ h1 {
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 10px; /* 15px / 730px */
 }
 
 .prvy-odsek {
@@ -446,7 +452,7 @@ h1 {
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 10px; /* 15px / 730px */
 }
 
 .text-ku-galerke {
@@ -471,7 +477,7 @@ h1 {
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 10px; /* 15px / 730px */
 }
 
 .countdown-text {
@@ -487,7 +493,7 @@ h1 {
   position: absolute;
   top: 345.21vh; /* 2520px / 730px */
   right: -9.77vw; /* 150px / 1536px */
-  max-width: 52.08vw; /* 800px / 1536px */
+  max-width: 800px; /* 800px / 1536px */
   margin: 0 auto;
   padding: 2.6vw 0; /* 40px / 730px */
 }
@@ -515,7 +521,7 @@ h1 {
   content: '';
   position: absolute;
   width: 1.3vw; /* 20px / 1536px */
-  height: 2.74vh; /* 20px / 1536px */
+  height: 1.3vw; /* 20px / 1536px */
   right: -0.65vw; /* 10px / 1536px */
   background-color: #fff;
   border: 0.2vw solid #ff7eb9; /* 3px / 1536px */
@@ -542,7 +548,7 @@ h1 {
   z-index: 0;
   right: 1.43vw; /* 22px / 1536px */
   border: medium solid #fff;
-  border-width: 1.1vh 0 0.52vw 1.1vh; /* 8px / 730px */
+  border-width: 8px 0 8px 8px; /* 8px / 730px */
   border-color: transparent transparent transparent #fff;
   transition: transform 0.3s ease;
 }
@@ -556,7 +562,7 @@ h1 {
   z-index: 0;
   left: 1.43vw; /* 22px / 1536px */
   border: medium solid #fff;
-  border-width: 1.1vh 0.52vw 1.1vh 0; /* 8px / 730px */
+  border-width: 8px 8px 8px 0; /* 8px / 730px */
   border-color: transparent #fff transparent transparent;
   transition: transform 0.3s ease;
 }
@@ -566,9 +572,9 @@ h1 {
 }
 
 .content {
-  padding: 2.05vh; /* 15px / 730px */
+  padding: 0.98vw; /* 15px / 730px */
   background-color: #fff;
-  border-radius: 1.1vh; /* 8px / 730px */
+  border-radius: 8px; /* 8px / 730px */
   box-shadow: 0 0.27vh 1.37vh rgba(0, 0, 0, 0.1); /* 4px / 730px, 10px / 730px */
   position: relative;
   transition: transform 0.3s ease;
@@ -593,9 +599,9 @@ h1 {
   left: 10%;
   object-fit: cover;
   width: 9.77vw; /* 150px / 1536px */
-  height: 16.07vh; /* 112.5px / 730px */
-  border-radius: 1.1vh; /* 8px / 730px */
-  margin-bottom: 1.1vh; /* 8px / 730px */
+  height: calc(9.755vw * 0.75); /* 112.5px / 730px */
+  border-radius: 8px; /* 8px / 730px */
+  margin-bottom: 0.52vw; /* 8px / 730px */
 }
 
 .content p {
@@ -618,7 +624,7 @@ h1 {
 .timeline-nadpis {
   border: solid 0.26vw black; /* 4px / 1536px */
   text-align: center;
-  border-radius: 1.37vh; /* 10px / 730px */
+  border-radius: 10px; /* 10px / 730px */
   background-color: white;
   padding: 0.33vw; /* 5px / 730px */
   display: block;
@@ -651,12 +657,13 @@ h1 {
   left: 10.42vw; /* 160px / 1536px */
   text-align: center;
   border: solid 0.26vw black; /* 4px / 1536px */
-  border-radius: 1.37vh; /* 10px / 730px */
+  border-radius: 10px; /* 10px / 730px */
   background-color: white;
   padding: 0.68vh; /* 5px / 730px */
   top: 568.49vh; /* 4150px / 730px */
   right: 71.61vw; /* 1100px / 1536px */
 }
+
 
 .hidden {
   display: none;
@@ -664,6 +671,10 @@ h1 {
   padding: 1.37vh; /* 10px / 730px */
   margin-top: 1.37vh; /* 10px / 730px */
   background: #f9f9f9;
+}
+
+.hidden-text {
+  font-size: 1.04vw;
 }
 
 .tajny-obraz {
@@ -690,7 +701,7 @@ h1 {
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 0.2vw black; /* 3px / 1536px */
-  border-radius: 2.05vh; /* 15px / 730px */
+  border-radius: 10px; /* 15px / 730px */
 }
 
 .posledny-text {
@@ -707,4 +718,116 @@ h1 {
   position: absolute;
   top: 454.79vh; /* 3320px / 730px */
   left: 39.06vw; /* 600px / 1536px */
+}
+
+@media (max-width: 768px) {
+  .uvod {
+    top: min(31.51vh, 150px);
+  }
+
+  .post-container {
+    top: min(41.1vh, 200px);
+  }
+
+  #kalendar {
+    top: min(82.19vh, 300px);
+  }
+
+  .text-ku-ig-kalendar-a-galerii {
+    top: min(143.84vh, 450px);
+    width: min(48.44vw, 150px);
+    @media (orientation: landscape) {
+      width: min(48.44vw, 50%);
+    }
+  }
+
+  #galeria {
+    top: min(205.48vh, 600px);
+    @media (orientation: landscape) {
+      top: min(205.48vh, 650px);
+    }
+  }
+
+  .jadro-g {
+    top: min(305.48vh, 810px, 105.96vh);
+    @media (orientation: landscape) {
+      top: max(305.48vh);
+    }
+  }
+
+  #countdown-container {
+    top: min(376.71vh, 900px, 117vh);
+    @media (orientation: landscape) {
+      top: min(376.71vh, 1170px);
+    }
+  }
+
+  .countdown-odsek {
+    top: min(376.71vh, 990px, 127vh);
+    @media (orientation: landscape) {
+      top: min(376.71vh);
+    }
+  }
+
+  .timeline {
+    top: min(345.21vh, 890px, 116vh);
+    max-height: fit-content;
+    @media (orientation: landscape) {
+      top: min(345.21vh);
+    }
+  }
+
+  .timeline-nadpis {
+    top: max(-13.7vh, -10px);
+    @media (orientation: landscape) {
+      top:max(-13.7vh);
+    }
+  }
+
+  .arrow {
+    top: min(454.79vh, 1270px, 158vh);
+    @media (orientation: landscape) {
+      top: min(454.79vh);
+    }
+  }
+
+  .posledny-odsek {
+    top: min(479.45vh, 1320px, 164vh);
+    @media (orientation: landscape) {
+      top: min(479.45vh);
+    }
+  }
+
+  #tajna-sekcia {
+    top: min(568.49vh, 1560px, 190vh);
+    @media (orientation: landscape) {
+      top: min(568.49vh);
+    }
+  }
+
+  #heslo {
+    width: 25vw;
+  }
+
+  .parallax-bg {
+    height: 150vh;
+  }
+
+  .parallax-stromy {
+    position: absolute;
+    bottom: min(-118vh, 1500px);
+    height: 300%;
+  }
+  body.active::before{
+    height: 300%;
+  }
+  body {
+    max-height: 100vh;
+    background-size: 100% 100%;
+  }
+
+  .parallax-container {
+    min-height: 1vh;
+    max-height: 1vh;
+  }
 }
