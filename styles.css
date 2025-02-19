@@ -815,14 +815,13 @@ h2 {
 
   .parallax-stromy {
     position: absolute;
-    bottom: min(-150dvh, 2000px);
+    bottom: min(-132.5vh, 2000px);
     height: 300%;
   }
   body.active::before{
     height: 300%;
   }
   body {
-    max-height: 118dvh;
     background-size: 100% 100%;
   }
 
