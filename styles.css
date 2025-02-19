@@ -742,7 +742,7 @@ h2 {
   }
 
   #galeria {
-    top: min(205.48vh, 600px);
+    top: min(205.48vh, 600px, 82.19vh);
     @media (orientation: landscape) {
       top: min(205.48vh, 650px);
     }
@@ -815,7 +815,7 @@ h2 {
 
   .parallax-stromy {
     position: absolute;
-    bottom: min(-118vh, 1500px);
+    bottom: min(-120vh, 1500px);
     height: 300%;
   }
   body.active::before{
