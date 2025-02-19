@@ -814,6 +814,7 @@ h2 {
   }
 
   .parallax-stromy {
+    overflow: hidden;
     position: absolute;
     bottom: min(-136.5vh);
     min-height: 90%;
