@@ -3,7 +3,6 @@
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -26,7 +25,7 @@ body {
 }
 
 .post-container {
-  max-height: max-content;
+  max-height: fit-content;
   position: absolute;
   right: 1.95vw; /* 30px / 1536px */
   top: 41.1vh; /* 300px / 730px */
@@ -270,7 +269,7 @@ body.active .gallery-item:not(.active) {
   left: 0;
   width: 100%;
   height: 150vh;
-  background: url(obloha.jpg) top center;
+  background: url("assets/obloha.jpg") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
   filter: blur(0.27vh); /* 2px / 730px */
@@ -282,7 +281,7 @@ body.active .gallery-item:not(.active) {
   bottom: 0;
   width: 100%;
   height: 370%;
-  background: url(stromy-parellax.png) top center;
+  background: url("assets/stromy-parellax.png") top center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.41vh); /* 3px / 730px */
@@ -742,14 +741,14 @@ h2 {
   }
 
   #galeria {
-    top: min(205.48vh, 600px, 82.19vh);
+    top: min(205.48vh, 600px);
     @media (orientation: landscape) {
       top: min(205.48vh, 650px);
     }
   }
 
   .jadro-g {
-    top: min(305.48vh, 810px, 105.96vh);
+    top: min(305.48vh, 820px, 105.96vh);
     @media (orientation: landscape) {
       top: max(305.48vh);
     }
@@ -811,24 +810,58 @@ h2 {
 
   .parallax-bg {
     height: 150vh;
+    @media (orientation: landscape) {
+      height: 150vh;
+    }
   }
 
   .parallax-stromy {
-    position: absolute;
-    bottom: min(-120vh, 1500px);
-    height: 300%;
+    @supports (-webkit-touch-callout: none) {
+      overflow: hidden;
+      position: absolute;
+      bottom: min(-136.5vh);
+      min-height: 90%;
+      @media (orientation: landscape) {
+        position: sticky;
+        bottom: 0;
+        height: 370%;
+      }
+    }
+    @supports not (-webkit-touch-callout: none) {
+      overflow: hidden;
+      position: absolute;
+      bottom: min(-122.5vh);
+      min-height: 90%;
+      @media (orientation: landscape) {
+        position: sticky;
+        bottom: 0;
+        height: 370%;
+      }
+    }
   }
-  body.active::before{
-    height: 300%;
-  }
-  body {
-    max-height: 100vh;
-    max-height: 118vh;
-    background-size: 100% 100%;
-  }
+
 
   .parallax-container {
     min-height: 1vh;
-    max-height: 1vh;
+    @media (orientation: landscape) {
+      height: 300vh;
+    }
+  }
+
+  body {
+    @supports (-webkit-touch-callout: none) {
+      height: calc(100dvh - 0.5px);
+     @media (orientation: landscape) {
+      height: 100vh;
+      background-size: 120%, 110%; 
+      }
+    }
+    @supports not (-webkit-touch-callout: none) {
+      height: calc(100vh - 0.5px);
+      @media (orientation: landscape) {
+        height: 100vh;
+        background-size: 120%, 110%; 
+      }
+    }
   }
 }
