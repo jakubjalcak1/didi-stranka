@@ -20,7 +20,7 @@ body {
   height: 100vh;
   color: #333;
   /*background: linear-gradient(to bottom, #87CEEB, #228B22, #000);*/
-  background: #ffffff;
+  background: white;
   background-size: 95% 95%;
   perspective: 1px;
   transform-style: preserve-3d;
@@ -871,6 +871,7 @@ h2 {
     }
   }
 }
+
 
 
 
