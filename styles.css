@@ -8,7 +8,7 @@
 }
 
 html {
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -17,9 +17,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100dvh;
   color: #333;
-  background: linear-gradient(to bottom, #87CEEB, #228B22, #000);
   background: white;
   background-size: 95% 95%;
   perspective: 1px;
@@ -871,6 +870,7 @@ h2 {
     }
   }
 }
+
 
 
 
