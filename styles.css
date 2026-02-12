@@ -8,7 +8,7 @@
 }
 
 html {
-  min-height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   color: #333;
   background: white;
   background-size: 95% 95%;
@@ -870,6 +870,7 @@ h2 {
     }
   }
 }
+
 
 
 
