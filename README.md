@@ -4,7 +4,7 @@ A fun and interactive Valentine's Day web experience built with HTML, CSS and Ja
 
 ## Live Demo
 
-[jakubjalcak1.github.io/valentines](https://jakubjalcak1.github.io/valentines)
+[jakubjalcak1.github.io/didi-stranka](https://jakubjalcak1.github.io/didi-stranka)
 
 ## Features
 
