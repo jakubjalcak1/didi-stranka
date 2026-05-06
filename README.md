@@ -20,4 +20,4 @@ A fun and interactive Valentine's Day web experience built with HTML, CSS and Ja
 
 ## Author
 
-**Jakub Jalčak** — [jakubjalcak1.github.io](https://jakubjalcak1.github.io)
+**Jakub Jalčak** — [jakubjalcak1.github.io](https://jakubjalcak1.github.io/portfolio)
